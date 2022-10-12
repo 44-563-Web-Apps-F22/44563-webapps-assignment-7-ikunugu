@@ -5,59 +5,137 @@
     <title>Lab Assignment -07</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
-        crossorigin="anonymous"></script>
-    
-    
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"   
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" 
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <h3 style="color:deeppink; text-align:center;">Treasure hunt Indu Sri Kunuguntla</h3>
     <p style="color:darkturquoise; text-align: center;">Click on the chests to search for treasure</p>
-    <p style="color:darkturquoise; text-align: center;" id="chests">Number of chests checked is zero.</p>
-    <p style="color:darkturquoise; text-align: center;" id="score">Score is unknown</p>
-    <p style="color:darkturquoise; text-align: center;" id="help">Help report</p>
+    <p style="color:darkturquoise; text-align: center;" id="chests" >Number of chests checked is zero.</p>
+    <p style="color:darkturquoise; text-align: center;" id="score" >Score is unknown</p>
+    <p style="color:darkturquoise; text-align: center;" id="help" >Help report</p>
+    <p style="color:darkturquoise; text-align: center;" id="lastcheck" >Last check</p>
     <div class="row" style="padding-left: 150px;" >
-        <div class="col-md-2"><img src="treasure chest.jpg" alt="treasure box" style="width: 200px;height:110px;"></div>
-        <div class="col-md-2"><img src="treasure chest.jpg" alt="treasure box" style="width: 200px;height:110px;"></div>
-        <div class="col-md-2"><img src="treasure chest.jpg" alt="treasure box" style="width: 200px;height:110px;"></div>
-        <div class="col-md-2"><img src="treasure chest.jpg" alt="treasure box" style="width: 200px;height:110px;"></div>
-        <div class="col-md-2"><img src="treasure chest.jpg" alt="treasure box" style="width: 200px;height:110px;"></div>
+        <div class="col-md-2"><img id="0" src="treasure chest.jpg" onclick="check(0)" alt="treasure box" style="width: 200px;height:110px;"></div>
+        <div class="col-md-2"><img id="1" src="treasure chest.jpg" onclick="check(1)" alt="treasure box" style="width: 200px;height:110px;"></div>
+        <div class="col-md-2"><img id="2" src="treasure chest.jpg" onclick="check(2)" alt="treasure box" style="width: 200px;height:110px;"></div>
+        <div class="col-md-2"><img id="3" src="treasure chest.jpg" onclick="check(3)" alt="treasure box" style="width: 200px;height:110px;"></div>
+        <div class="col-md-2"><img id="4" src="treasure chest.jpg" onclick="check(4)" alt="treasure box" style="width: 200px;height:110px;"></div>
       </div>
       <div class="row" style="padding-left: 150px;" >
-        <div class="col-md-2"><img src="treasure chest.jpg" alt="treasure box" style="width: 200px;height:110px;"></div>
-        <div class="col-md-2"><img src="treasure chest.jpg" alt="treasure box" style="width: 200px;height:110px;"></div>
-        <div class="col-md-2"><img src="treasure chest.jpg" alt="treasure box" style="width: 200px;height:110px;"></div>
-        <div class="col-md-2"><img src="treasure chest.jpg" alt="treasure box" style="width: 200px;height:110px;"></div>
-        <div class="col-md-2"><img src="treasure chest.jpg" alt="treasure box" style="width: 200px;height:110px;"></div>
+        <div class="col-md-2"><img id="5" src="treasure chest.jpg" onclick="check(5)" alt="treasure box" style="width: 200px;height:110px;"></div>
+        <div class="col-md-2"><img id="6" src="treasure chest.jpg" onclick="check(6)" alt="treasure box" style="width: 200px;height:110px;"></div>
+        <div class="col-md-2"><img id="7" src="treasure chest.jpg" onclick="check(7)" alt="treasure box" style="width: 200px;height:110px;"></div>
+        <div class="col-md-2"><img id="8" src="treasure chest.jpg" onclick="check(8)" alt="treasure box" style="width: 200px;height:110px;"></div>
+        <div class="col-md-2"><img id="9" src="treasure chest.jpg" onclick="check(9)" alt="treasure box" style="width: 200px;height:110px;"></div>
       </div>
       <div class="row" style="padding-left: 150px;" >
-        <div class="col-md-2"><img src="treasure chest.jpg" alt="treasure box" style="width: 200px;height:110px;"></div>
-        <div class="col-md-2"><img src="treasure chest.jpg" alt="treasure box" style="width: 200px;height:110px;"></div>
-        <div class="col-md-2"><img src="help.jpg" alt="help" style="width: 200px;height:110px;"></div>
-        <div class="col-md-2"><img src="treasure chest.jpg" alt="treasure box" style="width: 200px;height:110px;"></div>
-        <div class="col-md-2"><img src="treasure chest.jpg" alt="treasure box" style="width: 200px;height:110px;"></div>
+        <div class="col-md-2"><img id="10" src="treasure chest.jpg" onclick="check(10)" alt="treasure box" style="width: 200px;height:110px;"></div>
+        <div class="col-md-2"><img id="11" src="treasure chest.jpg" onclick="check(11)" alt="treasure box" style="width: 200px;height:110px;"></div>
+        <div class="col-md-2"><img id="12" src="help.jpg" alt="help" onclick="check(help())" style="width: 200px;height:110px;"></div>
+        <div class="col-md-2"><img id="13" src="treasure chest.jpg" onclick="check(13)" alt="treasure box" style="width: 200px;height:110px;"></div>
+        <div class="col-md-2"><img id="14" src="treasure chest.jpg" onclick="check(14)" alt="treasure box" style="width: 200px;height:110px;"></div>
       </div>
       <div class="row" style="padding-left: 150px;" >
-        <div class="col-md-2"><img src="treasure chest.jpg" alt="treasure box" style="width: 200px;height:110px;"></div>
-        <div class="col-md-2"><img src="treasure chest.jpg" alt="treasure box" style="width: 200px;height:110px;"></div>
-        <div class="col-md-2"><img src="treasure chest.jpg" alt="treasure box" style="width: 200px;height:110px;"></div>
-        <div class="col-md-2"><img src="treasure chest.jpg" alt="treasure box" style="width: 200px;height:110px;"></div>
-        <div class="col-md-2"><img src="treasure chest.jpg" alt="treasure box" style="width: 200px;height:110px;"></div>
+        <div class="col-md-2"><img id="15" src="treasure chest.jpg" onclick="check(15)" alt="treasure box" style="width: 200px;height:110px;"></div>
+        <div class="col-md-2"><img id="16" src="treasure chest.jpg" onclick="check(16)" alt="treasure box" style="width: 200px;height:110px;"></div>
+        <div class="col-md-2"><img id="17" src="treasure chest.jpg" onclick="check(17)" alt="treasure box" style="width: 200px;height:110px;"></div>
+        <div class="col-md-2"><img id="18" src="treasure chest.jpg" onclick="check(18)" alt="treasure box" style="width: 200px;height:110px;"></div>
+        <div class="col-md-2"><img id="19" src="treasure chest.jpg" onclick="check(19)" alt="treasure box" style="width: 200px;height:110px;"></div>
       </div>
       <div class="row" style="padding-left: 150px;" >
-        <div class="col-md-2"><img src="treasure chest.jpg" alt="treasure box" style="width: 200px;height:110px;"></div>
-        <div class="col-md-2"><img src="treasure chest.jpg" alt="treasure box" style="width: 200px;height:110px;"></div>
-        <div class="col-md-2"><img src="treasure chest.jpg" alt="treasure box" style="width: 200px;height:110px;"></div>
-        <div class="col-md-2"><img src="treasure chest.jpg" alt="treasure box" style="width: 200px;height:110px;"></div>
-        <div class="col-md-2"><img src="treasure chest.jpg" alt="treasure box" style="width: 200px;height:110px;"></div>
+        <div class="col-md-2"><img id="20" src="treasure chest.jpg" onclick="check(20)" alt="treasure box" style="width: 200px;height:110px;"></div>
+        <div class="col-md-2"><img id="21" src="treasure chest.jpg" onclick="check(21)" alt="treasure box" style="width: 200px;height:110px;"></div>
+        <div class="col-md-2"><img id="22" src="treasure chest.jpg" onclick="check(22)" alt="treasure box" style="width: 200px;height:110px;"></div>
+        <div class="col-md-2"><img id="23" src="treasure chest.jpg" onclick="check(23)" alt="treasure box" style="width: 200px;height:110px;"></div>
+        <div class="col-md-2"><img id="24" src="treasure chest.jpg" onclick="check(24)" alt="treasure box" style="width: 200px;height:110px;"></div>
       </div>
+  <script>
+    let ids=new Array();
+        for(i=0;i<25;i++)
+        {
+            ids.push(i);
+        }
+        let chestCount=0;
+        let score=0;
+        let lastCheck=12;
+        let treasureLocation =18;
+        function check(position)
+        {
+            var a=parseInt(position);            
+            if(a===treasureLocation)
+            {
+                document.getElementById(position).src="treasure.jpg"
+                score++;
+            }
+            else{
+                document.getElementById(position).src="emptytreasure.jpg"
+                chestCount++
+            }
+            lastCheck=a;
+           document.getElementById("chests").innerHTML="Number of chests checked is zero "+chestCount;
+           document.getElementById("score").innerHTML="Score is unknown "+score;
+
+            
+        }
+        let assist=""
+        function help()
+        {
+             rem=lastCheck%5;
+             div=lastCheck/5;
+             i=treasureLocation;
+                if(i%5===rem)
+                {
+                        if(i<lastCheck)
+                        {
+                            assist="up"
+                            
+                        }
+                        else if(i>lastCheck)
+                        {
+                             assist="down"
+                             
+                        }
+                        else
+                        {
+                            assist="Sorry, no help available"
+                           
+                        }
+                    }
+                
+                    
+                    
+                else if((i%5 < rem)){
+                    if(parseInt(i/5)===parseInt(div))
+                    {
+                        assist="left"
+                        
+                    }
+                    
+                    else{
+                        assist="Sorry, no help available"
+                        
+                    }
+                
+
+                }
+                else{
+                    if(parseInt(i/5)===parseInt(div))
+                    {
+                        assist="right"
+                    }
+                    else
+                    assist="Sorry, no help available"
+                    
+                }
+             
+                document.getElementById("help").innerHTML="Help report "+assist
+        }
+    </script>
 </body>
 </html>
