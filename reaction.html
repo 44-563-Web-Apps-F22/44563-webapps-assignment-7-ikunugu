@@ -1,39 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>setTimeout use</title>
+  <title>Time</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <h1>Indu Sri Kunuguntla reaction timer</h1>
+    <h2>Indu Sri Kunuguntla reaction timer</h2>
+    <div class="row menu">
+        <div class="col-md">
+            <p id="target">Your time</p>
+        </div>
+        <div class="col-md">
+            <p id="countdown">Count</p>
+        </div>
+    </div>
+    <div class="container">
+        <button class="btn btn-warning" type="submit" onclick="startTime()">Start Timer</button>
+        <button class="btn btn-secondary" type="submit" onclick="recordReact()">React Now</button>
+    </div>
+</div>
 
-  <h2>Timeout - Red in 3 seconds</h2>
+<script>
+    var myTime = Date.now()
 
-  <button type="button"
-  class="btn btn-primary"
-  onclick="buttonPress2()">
-  Click me change the color.</button>
-  
-  <p id="target">I will become red </p>
-  
-  <script> 
-  function buttonPress1() {
-    setTimeout(function(){
-      document.getElementById('target').style.color = "red"
-    }, 3000)
-  }
+    function recordReact() {
+        myTime = Date.now()
+        console.log(myTime)
+    }
 
-  function buttonPress2() {
-    setTimeout(()=>{
-      document.getElementById('target').style.color = "red"
-    }, 3000)
-  }
-  </script>
-
+    function startTime() {
+                for(let k = 0; k < 4; k++) {
+                    setTimeout(() => {
+                        document.getElementById("countdown").innerHTML = k
+                    }, ((3-k)*1000));
+                }
+                
+                setTimeout(() => {
+                    if(myTime == undefined) {
+                        document.getElementById("target").innerHTML = "Too Slow"
+                    } else {
+                        let buttonTime = Date.now()
+                        document.getElementById("target").innerHTML = "Time was " + (buttonTime - myTime)
+                    }
+                }, 3000);
+            }
+        </script>
 </body>
 </html>
