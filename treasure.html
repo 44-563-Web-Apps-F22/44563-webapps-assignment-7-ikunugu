@@ -136,6 +136,17 @@
              
                 document.getElementById("help").innerHTML="Help report "+assist
         }
+        function reset() {
+            var chestCount = 0;
+            var score = 0;
+            var lastCheck = 12;
+            var treasureLocation = generateRandomIntegerInRange(0, 24);
+        }
+
+        function generateRandomIntegerInRange(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+    </script>
     </script>
 </body>
 </html>
